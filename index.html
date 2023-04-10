@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #ffdcdc;
+            height: 1000px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav {
+            display: flex;
+            background-color: #4a3933;
+            height: 60px;
+            width: 100%;
+            justify-content: end;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-right: 10px;
+            font-weight: 500;
+            
+        }
+
+        #Portfolio {
+            font-size: 40px;
+            color: white;
+            flex-grow: 2;
+            justify-content: flex-start;
+            margin-left: 20px;
+        }
+
+        #page-1 {
+            display: flex;
+            height: 500px;
+            background-color: white;
+            justify-content: center;
+            position: sticky;
+        }
+        
+        .home img {
+            width: 300px;
+            height: 300px;
+            border-radius: 500px;
+            margin-top: 20px;
+            align-self: center;
+            border-style: solid;
+            border-width: 10px;
+            border-color: #4a3933;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            font-size: 20px;
+            justify-content: center;
+        }
+
+        .info p {
+            margin: 10px;
+            color: #4a3933;
+            font-weight: 500;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .calculate {
+            display: flex;
+            /* background-color: red; */
+            width: 100%;
+            height: 300px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            /* background-color: black; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        #score {
+            border-radius: 30px;
+            margin: 20px;
+            width: 400px;
+            height: 100px;
+            border: none;
+            font-size: 50px;
+            text-align: center;
+            color: #4a3933;
+            font-weight: bold;
+        }
+
+        #submitBtn {
+            border-radius: 20px;
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 500;
+            border: none;
+            background-image: url(button-1.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: white;
+        }
+
+        .boxbutton {
+            display: flex;
+            justify-content: center;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .calculate h1 {
+            margin-top: 50px;
+            color: #4a3933;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <p id="Portfolio"> Portfolio</p>
+        <a href="#page-1"> Home </a>
+        <a href="#page-2"> Calculate </a>
+    </div>
+    <div id="page-1" class="home">
+        <img id="cat" src="cat.jpeg" alt="">
+        <div class="info">
+            <p> Name : Metang </p>
+            <p> Age : 2 years</p>
+            <p> DD/MM/YY : 05/01/2021</p>
+        </div>
+    </div>
+    <div id="page-2" class="calculate">
+        <h1>Calculate Grade</h1>
+        <form class="box">
+            <input id = "score" type="text">
+            <div class="boxbutton">
+                <input id ="submitBtn" type="button" onclick="calculate()" value="">
+            </div>
+        </form>
+        <p id="result"></p>  
+        <script src="script.js"></script>
+        <script src="main.js" theme="dark" position="bottom-right"></script>
+    </div>
+</body>
+</html>
